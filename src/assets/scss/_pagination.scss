@@ -1,0 +1,30 @@
+// Pagination
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .pagination {
+    margin-bottom: 0;
+  }
+  .page-item {
+    .page-link {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .previous,
+  .next {
+    .page-link {
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    &.disabled {
+      .page-link {
+        color: $secondary !important;
+      }
+    }
+  }
+}

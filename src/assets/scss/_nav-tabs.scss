@@ -1,0 +1,73 @@
+// Nav Tabs 
+.tab-icon-wrapper {
+  @include media-breakpoint-up(xl) {
+    padding-left: 53px;
+  }
+
+  .top-navs {
+    .card {
+      position: relative;
+      margin-bottom: 0;
+
+      &.active {
+        &::before {
+          position: absolute;
+          bottom: -21px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-image: url('../img/arrow.png');
+          background-size: auto;
+          width: 25px;
+          height: 13px;
+          background-repeat: no-repeat;
+          z-index: 10;
+          content: '';
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+    }
+  }
+
+
+  // Tab Content 
+  .tab-content {
+    margin-top: 20px;
+    position: relative;
+
+    .card {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.nav-tab-icon {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tab-content-search {
+  &.tab-content {
+    .form-control {
+      height: auto;
+    }
+  }
+}
+
+.search-tabs {
+  .nav-tabs {
+    .nav-link {
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
+}

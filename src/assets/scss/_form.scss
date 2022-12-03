@@ -1,0 +1,136 @@
+.select-custom {
+  border: 0;
+  background-color: transparent;
+  color: $dark;
+  width: auto;
+  cursor: pointer;
+
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.form-control {
+  &:focus {
+    box-shadow: none;
+  }
+
+  border-color: #ccc;
+}
+
+.modal-content .nav-tabs .nav-link {
+  border-radius: 0;
+}
+
+// Update Image
+.form-group-img {
+  img {
+    width: 100px;
+    border-radius: 5px;
+  }
+}
+
+// Form Group
+.form-group-range-jobs {
+  display: flex;
+  margin-bottom: 0;
+
+  .label {
+    width: 75px;
+    margin-bottom: 0;
+  }
+
+  .form-control {
+    width: calc(100% - 75px) !important;
+  }
+}
+
+.search-tabs {
+  padding: 10px;
+}
+
+.search-tabs .tab-content {
+  padding: 10px;
+}
+
+.search-tabs .nav-tabs {
+  border-bottom: 0;
+}
+
+.search-tabs .nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border: none;
+}
+
+.tab-content {
+  .form-control {
+    border-radius: 0;
+    // height: 45px;
+    border-color: #ccc;
+  }
+}
+
+.phone-number-wrapper.PhoneInput {
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  height: 45px;
+}
+
+// phone-number-wrapper
+.phone-number-wrapper {
+  .PhoneInputInput {
+    height: calc(1.5em + 0.75rem + 2px) !important;
+    border: none;
+    // border-radius: 5px;
+
+    &:focus {
+      border: none !important;
+      outline: none;
+    }
+
+  }
+
+  &.PhoneInput {
+    &.PhoneInput--focus {
+      .PhoneInputInput {
+        border: none !important;
+      }
+    }
+  }
+
+}
+
+
+.PhoneInputCountryIcon--border {
+  /* Removed `background-color` because when an `<img/>` was still loading
+	   it would show a dark gray rectangle. */
+  /* For some reason the `<img/>` is not stretched to 100% width and height
+	   and sometime there can be seen white pixels of the background at top and bottom. */
+  background-color: red !important;
+  /* Border is added via `box-shadow` because `border` interferes with `width`/`height`. */
+  /* For some reason the `<img/>` is not stretched to 100% width and height
+	   and sometime there can be seen white pixels of the background at top and bottom,
+	   so an additional "inset" border is added. */
+  box-shadow: 0 0 0 green yellow, inset 0 0 0 green yellow !important;
+}
+
+.input-group-text {
+  border-color: #ccc;
+}
+
+.skill-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    position: relative;
+
+    .close {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+    }
+  }
+}

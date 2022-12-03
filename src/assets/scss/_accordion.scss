@@ -1,0 +1,52 @@
+// Accordion Default 
+.accordion-default {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .accordion__button {
+    background-color: #F5F6FA;
+    font-family: $font-family-muli;
+    font-size: 18px;
+    color: $dark;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+
+    &:focus {
+      outline: unset;
+    }
+
+    &:hover {
+      background-color: #F5F6FA;
+    }
+
+    &::before {
+      font-family: "Material Design Icons";
+      content: "\F0419";
+      border: 0;
+      transform: rotate(0) !important;
+    }
+  }
+
+  .accordion__button[aria-expanded='true']::before {
+    font-family: "Material Design Icons";
+    content: "\F0377";
+  }
+
+  .accordion__panel {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .accordion__item+.accordion__item {
+    border-top: unset;
+  }
+
+  .card {
+    cursor: pointer;
+  }
+
+  .accordion__panel {
+    padding-left: 0;
+  }
+}

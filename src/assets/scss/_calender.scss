@@ -1,0 +1,59 @@
+// Calender 
+.react-calendar {
+  border: 0 !important;
+  width: auto !important;
+  font-size: 18px;
+}
+
+
+/* Full Calendar */
+.full-calendar-wrapper {
+  height: calc(100vh - 120px);
+
+  .fc-button-group {
+    .fc-button-primary {
+      background-color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        background-color: #009161;
+        border-color: #009161;
+      }
+
+      &:active {
+        background-color: #009161 !important;
+        border-color: #009161 !important;
+      }
+
+      &:focus {
+        box-shadow: unset !important;
+      }
+
+    }
+  }
+
+  .fc {
+    .fc-button-primary {
+      background-color: $primary !important;
+      border-color: $primary !important;
+
+      &:disabled {
+        background-color: #009161 !important;
+        border-color: #009161 !important;
+      }
+    }
+  }
+
+  .fc-toolbar-title {
+    color: $dark;
+  }
+}
+
+.fc-v-event {
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.fc-timegrid-event {
+  border-radius: 5px;
+}

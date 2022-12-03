@@ -1,0 +1,31 @@
+.btn {
+    &.btn-icon {
+        padding: 0;
+
+        i {
+            font-size: 17px;
+        }
+
+        &.btn-sm {
+            width: 25px;
+            height: 25px;
+            line-height: 1;
+        }
+    }
+
+    &.btn-sqr {
+        width: 45.3906px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .i {
+            font-size: 12px;
+        }
+    }
+
+
+
+
+
+}

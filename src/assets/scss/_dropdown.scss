@@ -1,0 +1,22 @@
+.dropdown-custom {
+  margin-bottom: 8px;
+
+  .dropdown-toggle {
+    cursor: pointer;
+    color: $secondary;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+// Dropdown Icon 
+.dropdown-icon {
+  .toggler {
+    cursor: pointer;
+    font-size: 20px;
+    color: $secondary;
+  }
+}

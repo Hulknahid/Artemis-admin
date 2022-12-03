@@ -1,0 +1,65 @@
+.icon {
+  i {
+    font-size: 25px;
+    line-height: 25px;
+  }
+
+  // Iconn border 
+  &.icon-border {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Border Danger 
+  &.border-warning {
+    border: 1px solid $warning;
+
+    i {
+      color: $warning;
+    }
+  }
+
+  // Border Danger 
+  &.border-danger {
+    border: 1px solid $danger;
+
+    i {
+      color: $danger;
+    }
+  }
+
+  // Border Danger 
+  &.border-green {
+    border: 1px solid $green;
+
+    i {
+      color: $green;
+    }
+  }
+
+  &.icon-md {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 7px;
+    }
+
+    i {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &.rounded-circle {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      color: #B8C5D3;
+    }
+  }
+}

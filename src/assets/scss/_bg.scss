@@ -1,0 +1,85 @@
+.bg-green-opcity,
+.bg-warning-opcity,
+.bg-info-opcity,
+.bg-primary-opcity,
+.bg-teal-opcity,
+.bg-orange-deep-opcity,
+.bg-green-opcity,
+.bg-green-opcity,
+.bg-green-opcity {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+  }
+
+  &.rounded {
+    &::after {
+      border-radius: 25px;
+    }
+  }
+}
+
+
+
+// Bg Green Opcity
+.bg-green-opcity {
+  color: $green;
+
+  &::after {
+    background-color: rgba($green, .2);
+  }
+}
+
+
+// Bg Warning Opcity
+.bg-warning-opcity {
+  color: $warning;
+
+  &::after {
+    background-color: rgba($warning, .2);
+  }
+}
+
+// Bg Warning Opcity
+.bg-info-opcity {
+  position: relative;
+
+  &::after {
+    background-color: rgba($info, .2);
+  }
+}
+
+// Bg Primary Opcity
+.bg-primary-opcity {
+  color: $primary;
+
+  &::after {
+    background-color: rgba($primary, .2);
+  }
+}
+
+// Bg Primary Opcity
+.bg-teal-opcity {
+  color: $teal;
+
+  &::after {
+    background-color: rgba($teal, .2);
+  }
+}
+
+// Bg Primary Opcity
+.bg-orange-deep-opcity {
+  position: relative;
+  color: $orange-deep;
+
+  &::after {
+    background-color: rgba($orange-deep, .2);
+  }
+}

@@ -1,0 +1,4 @@
+export const appointmentConstants = {
+    APPOINTMENT_NAME: 'APPOINTMENT_NAME',
+    APPOINTMENT_ADD_TIME: 'APPOINTMENT_ADD_TIME'
+}

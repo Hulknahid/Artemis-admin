@@ -1,0 +1,17 @@
+/* === Layout === */
+.main-wrapper {
+  .page-wrapper {
+    display: flex;
+    position: relative;
+    padding-top: 71px;
+    padding-left: 61px;
+
+    .page-content {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 7.5px;
+      padding-right: 7.5px;
+      width: 100%;
+    }
+  }
+}

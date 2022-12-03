@@ -1,0 +1,31 @@
+.build-and-push:
+  image: node:14
+  stage: build
+  script:
+    - npm install
+    - unset CI
+    - npm run-script build
+    - echo "Build Sucessfully"
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    - scp -rp build ubuntu@54.83.99.60:/var/www/html/$HOST
+
+
+build-prod:
+  variables:
+    HOST: admin.artemisconsulting.io
+  extends: .build-and-push
+  only:
+    refs:
+      - master
+
+build-dev:
+  variables:
+    HOST: admin-dev.artemisconsulting.io
+  extends: .build-and-push
+  only:
+    refs:
+      - develop

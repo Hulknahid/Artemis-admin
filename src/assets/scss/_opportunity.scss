@@ -1,0 +1,85 @@
+// Opportunity Wrapper
+.opportunity-wrapper {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 1350px;
+  background-color: #f5f6fa;
+  padding: 15px;
+  border: 1px solid $border-color;
+  transform: translateX(100%);
+
+  -moz-transition-property: transform, right;
+  -webkit-transition-property: transform, right;
+  transition-property: transform, right;
+
+  -moz-transition-property: transform, right;
+  -webkit-transition-property: transform, right;
+  transition-property: transform, right;
+
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  z-index: 101;
+
+  @include media-breakpoint-up(lg) {
+    width: 760px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 1060px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    width: 1270px;
+  }
+
+  @include media-breakpoint-up(xxxl) {
+    width: 1540px;
+  }
+
+  &.active {
+    transform: translateX(0);
+    right: 0;
+    overflow-y: scroll;
+    height: 100vh;
+
+    .opportunity-header {
+      .close {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .opportunity-header {
+    position: relative;
+    // background-color: $white;
+// border-radius: 5px;
+    // box-shadow: 0px 1px 4px #e5e9f2;
+    // padding: 15px 15px 0;
+    // margin-bottom: 15px;
+
+    .close {
+      position: absolute;
+      left: -15px;
+      top: -15px;
+      width: 25px;
+      height: 25px;
+      background-color: $danger;
+      color: $white;
+      opacity: 0;
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      z-index: 10;
+      cursor: pointer;
+    }
+  }
+}

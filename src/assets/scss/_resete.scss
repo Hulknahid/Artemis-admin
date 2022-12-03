@@ -1,0 +1,70 @@
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: $font-family-secondary;
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+}
+
+h5,
+.h5 {
+  font-size: 16px;
+}
+
+h6,
+.h6 {
+  font-size: 14px;
+}
+
+
+
+.border-rounded {
+  border-radius: 5px !important;
+}
+
+.font-small {
+  font-size: 12px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+// Home company list 
+.companies-list {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Home Status list 
+.show-status {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+// Cursor Pointer
+.cursor-pointer {
+  cursor: pointer;
+}

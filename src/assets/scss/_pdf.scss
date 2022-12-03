@@ -1,0 +1,95 @@
+.react-pdf__Page__canvas {
+  margin: 0 auto;
+}
+
+.resume-wrapper {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  background-color: #f5f6fa;
+  padding: 15px;
+  border-left: 1px solid $border-color;
+  transform: translateX(100%);
+  -moz-transition-property: transform, right;
+  -webkit-transition-property: transform, right;
+  transition-property: transform, right;
+
+  -moz-transition-property: transform, right;
+  -webkit-transition-property: transform, right;
+  transition-property: transform, right;
+
+  -moz-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  z-index: 1050;
+
+  @include media-breakpoint-up(lg) {
+    width: 700px;
+  }
+
+  // @include media-breakpoint-up(xl) {
+  //   width: 700px;
+  // }
+
+  // @include media-breakpoint-up(xxl) {
+  //   width: 700px;
+  // }
+
+  @media (min-width: 1600px) {
+    width: 750px;
+  }
+
+  // @include media-breakpoint-up(xxxl) {
+  //   width: 1000px;
+  // }
+  &.active {
+    transform: translateX(0);
+    right: 0;
+    overflow-y: scroll;
+
+    .close {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .close {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 25px;
+    height: 25px;
+    background-color: $danger;
+    color: $white;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+// Resume Wrapper
+.resume-wrapper {
+  height: 100vh;
+
+  .pg-viewer-wrapper {
+    .document-container {
+      width: 100%;
+      table {
+        width: 100%;
+
+        img {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}

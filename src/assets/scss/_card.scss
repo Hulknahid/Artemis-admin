@@ -1,0 +1,43 @@
+// Card Default 
+.card-default {
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0px 1px 4px #e5e9f2;
+  border: 0;
+  margin-bottom: -15px;
+}
+
+.card {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 1px 4px #e5e9f2;
+  border: 0;
+  margin-bottom: 15px;
+}
+
+// Card Small 
+.card-sm {
+  .text-lg {
+    font-size: 18px;
+  }
+}
+
+
+
+// Home top card 
+.home-top-card {
+  @include media-breakpoint-up(xl) {
+    width: 90%;
+  }
+
+  .card-default {
+    height: 80px;
+  }
+}
+
+// Card Box Wrapper 
+.card-box-wrapper {
+  @include media-breakpoint-up(xl) {
+    // width: 90%;
+  }
+}

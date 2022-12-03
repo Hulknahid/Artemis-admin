@@ -1,0 +1,223 @@
+.navbar-custom {
+  background-color: $white;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  box-shadow: 0px 0px 5px $light;
+
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 51;
+
+  .baricon {
+    font-size: 20px;
+    line-height: 1;
+    margin-right: 12px;
+  }
+
+  .navbar-collapse {
+    margin-left: 32px;
+  }
+
+  .navbar-nav-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+
+    .nav-item-history {
+      padding-left: 15px;
+      padding-right: 15px;
+      color: $primary;
+
+      .nav-link {
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 22px;
+      }
+
+      &:hover {
+        color: #009161;
+      }
+
+      // History Wrapper
+      .history-wrrapper {
+        height: 100vh;
+        width: 400px;
+        background-color: rgba($dark, 1);
+        -webkit-perspective: 84rem;
+        perspective: 84rem;
+        z-index: 100;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        color: $white;
+        transform: translateX(100%);
+
+        -moz-transition-property: transform, right;
+        -webkit-transition-property: transform, right;
+        transition-property: transform, right;
+
+        -moz-transition-property: transform, right;
+        -webkit-transition-property: transform, right;
+        transition-property: transform, right;
+
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+
+        -moz-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+
+        &.active {
+          transform: translateX(0);
+          right: 0;
+        }
+
+        .history-header {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 12px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          border-bottom: 1px solid #1c1e25;
+
+          .btn-close {
+            color: $white;
+          }
+        }
+
+        .title {
+          font-size: 20px;
+        }
+
+        .filter-toggler {
+          i {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            background-color: $dark;
+            display: inline-block;
+            text-align: center;
+            border-radius: 5px;
+            margin-right: 10px;
+          }
+
+          font-size: 16px;
+        }
+
+        .history-body {
+          font-size: 12px;
+          height: calc(100vh - 140px);
+
+          h6 {
+            font-size: 13px;
+            margin-bottom: 3px;
+          }
+        }
+
+        .single-history {
+          padding-left: 12px;
+          padding-right: 12px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          border-bottom: 1px solid #1c1e25;
+
+          // &:last-child {
+          //   border-bottom: 0;
+          // }
+        }
+      }
+    }
+
+    .react-autosuggest__container {
+      position: relative;
+      width: 220px;
+    }
+
+    .react-autosuggest__suggestions-container {
+      position: absolute;
+      bottom: -135px;
+      width: inherit;
+      background-color: #fff;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      z-index: 10;
+    }
+
+    .react-autosuggest__input {
+      border-color: $primary;
+      border-width: 2px;
+    }
+  }
+
+  .dropdown-notify {
+    .mdi {
+      font-size: 22px;
+    }
+  }
+
+  // List Unstyled
+  .list-unstyled {
+    display: flex;
+
+    li {
+      position: relative;
+      padding-right: 30px;
+      color: $dark;
+
+      i {
+        margin-right: 5px;
+        color: $gray-400;
+      }
+
+      &:not(:first-child) {
+        padding-left: 20px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 1px;
+        height: 14px;
+        background-color: $gray-500;
+        content: "";
+      }
+
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Logout
+  .nav-item-logout {
+    .nav-link {
+      cursor: pointer;
+      color: $danger;
+      font-size: 18px;
+    }
+  }
+
+  // Media Sm
+  .media-sm {
+    align-items: center;
+
+    .media-heading {
+      font-size: 18px;
+      color: $primary;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}

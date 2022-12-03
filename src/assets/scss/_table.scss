@@ -1,0 +1,39 @@
+// Border Less Table
+.table {
+  &.table-borderless {
+    thead {
+      tr {
+        th {
+          font-size: 13px;
+          font-family: $font-family-muli;
+          font-weight: 500;
+          color: #b8c5d3;
+          text-transform: capitalize;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        margin-bottom: 15px;
+
+        td {
+          color: $dark;
+
+          span {
+            padding: 4px 10px;
+          }
+        }
+
+        .text-underline {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // Keyword
+  .keyword {
+    max-width: 200px;
+  }
+}
